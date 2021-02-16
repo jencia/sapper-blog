@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>诀死行者个人博客 - 文章列表</title>
+  <title>诀死行者的博客 - 文章列表</title>
 </svelte:head>
 
 <div class="container">

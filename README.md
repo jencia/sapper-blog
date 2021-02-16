@@ -1,4 +1,4 @@
-# 诀死行者个人博客
+# 诀死行者的博客
 
 网站地址：[jswalk.com](http://jswalk.com)
 
