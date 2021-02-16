@@ -6,8 +6,8 @@
   <h1>关于我</h1>
   <h2>基本信息</h2>
   <ul>
-    <li>个人博客：http://jswalk.com</li>
-    <li>GitHub地址：https://github.com/jencia</li>
+    <li>个人博客：<a href="http://jswalk.com" target="_blank">jswalk.com</a></li>
+    <li>GitHub地址：<a href="https://github.com/jencia" target="_blank">https://github.com/jencia</a></li>
     <li>邮箱地址：1073956837@qq.com</li>
   </ul>
   <p>我叫杨杰灿，网名叫 Jencia，喜欢称自己为诀死行者。诀死是 JS 的音译过来，所以又叫 JS 修行者。诀死又有另一层含义，就是要立志在这互联网江湖上闯出自己的一片天地，并创造出一套属于自己的武功秘诀，专心研究 JS ，至死方休，因此叫 “诀死”。</p>

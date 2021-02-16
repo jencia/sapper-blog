@@ -5,9 +5,16 @@ const matter = require('gray-matter');
 const formatDate = require('date-fns/format');
 const readingTime = require('reading-time');
 
-// Support JSX syntax highlighting
 require('prismjs/components/prism-jsx.min');
 require('prismjs/components/prism-bash.min');
+require('prismjs/components/prism-css.min');
+require('prismjs/components/prism-scss.min');
+require('prismjs/components/prism-less.min');
+require('prismjs/components/prism-diff.min');
+require('prismjs/components/prism-markup-templating.min');
+require('prismjs/components/prism-ejs.min');
+require('prismjs/components/prism-json.min');
+require('prismjs/components/prism-yaml.min');
 
 const EXCERPT_SEPARATOR = '<!-- more -->';
 const renderer = new marked.Renderer();
@@ -75,7 +82,7 @@ export default () => ({
 
     const html = marked(content);
     const readingStats = readingTime(content);
-    const printDate = formatDate(new Date(date), 'YYYY-MM-DD');
+    const printDate = formatDate(new Date(date), 'YYYY年MM月DD日');
 
     const exportFromModule = JSON.stringify({
       title: title || slug,

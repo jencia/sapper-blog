@@ -41,7 +41,7 @@
 </svelte:head>
 
 <header>
-  <p>发布日期：{post.printDate}<!-- <br/>预计阅读时间：{post.readingTime} 分钟< --></p>
+  <p>{post.printDate}<!-- <br/>预计阅读时间：{post.readingTime} 分钟< --></p>
   <h1>{post.title}</h1>
   <hr />
 </header>
