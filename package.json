@@ -1,7 +1,7 @@
 {
   "name": "sapper-blog",
   "description": "jswalk.com 个人博客代码源码",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "author": "jencia",
   "scripts": {
     "dev": "sapper dev",
