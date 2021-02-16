@@ -4,7 +4,7 @@
 
 <nav>
   <a class:selected={!segment} href='.'>首页</a>
-  <a rel=prefetch class:selected={segment === "blog"} href='blog'>文章列表</a>
+  <a rel=prefetch class:selected={segment === "article"} href='article'>文章列表</a>
   <a class:selected={segment === "about"} href='about'>关于我</a>
 </nav>
 

@@ -6,7 +6,7 @@
 <!-- Validate your twitter card with https://cards-dev.twitter.com/validator  -->
 <!-- Update content properties with your URL   -->
 <!-- 	<meta property="og:url" content=""} /> -->
-	<meta property="og:type" content="article" />
+	<meta property="og:type" content="blog" />
 	<meta property="og:title" content={post.title} />
 	<meta name="Description" content={post.excerpt} />
 	<meta property="og:description" content={post.excerpt} />
@@ -57,7 +57,7 @@
   export async function preload({ params, query }) {
     // the `slug` parameter is available because
     // this file is called [slug].html
-    const res = await this.fetch(`blog/${params.slug}.json`);
+    const res = await this.fetch(`article/${params.slug}.json`);
     const data = await res.json();
 
     if (res.status === 200) {

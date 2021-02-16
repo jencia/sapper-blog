@@ -28,7 +28,7 @@
 
   <h2>技术清单</h2>
   <blockquote>
-    <p>学习不易，坚持更不易，每段<a href="/blog/learning-journey">学习历程</a>都值得记录。</p>
+    <p>学习不易，坚持更不易，每段<a href="/article/20200702">学习历程</a>都值得记录。</p>
   </blockquote>
   <ul>
     <li>HTML、CSS、JavaScript，最近用 TypeScript 越用越喜欢。</li>
