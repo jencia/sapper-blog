@@ -20,5 +20,46 @@ jobs:
     - name: 安装依赖
       run: npm install
     - name: 构建
-      run: npm run build
-    
+      run: npm run dev
+    - name: 打包
+      run: tar -zcvf release.tgz __sapper__ static package.json package-lock.json pm2.config.json
+
+    - name: 发布
+      id: create_release
+      uses: actions/create-release@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+
+    - name: 上传
+      id: upload-release-asset
+      uses: actions/upload-release-asset@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./release.tgz
+        asset_name: release.tgz
+        asset_content_type: application/x-tgz
+
+    - name: 部署
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd /root/blog/node-project
+          rm -rf sapper-blog
+          mkdir sapper-blog
+          cd sapper-blog
+          wget https://github.com/jencia/sapper-blog/releases/latest/download/release.tgz
+          tar -zxvf release.tgz
+          rm -f release.tgz
+          npm ci --prod
+          pm2 reload pm2.config.json
