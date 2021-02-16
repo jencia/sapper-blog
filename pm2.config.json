@@ -1,7 +1,9 @@
 {
-    "app": {
-        "name": "sapper-blog",
-        "script": "npm",
-        "args": "start"
-    }
+    "apps": [
+        {
+            "name": "sapper-blog",
+            "script": "npm",
+            "args": "start"
+        }
+    ]
 }
