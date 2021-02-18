@@ -4,14 +4,16 @@
 
 <div class="container">
   <h1>关于我</h1>
+  <blockquote>
+    <p>网站代码源码已开源到 <a href="https://github.com/jencia/sapper-blog" target="_blank">jencia/sapper-blog</a> ，文章内容部分如要引用请注明出处。</p>
+  </blockquote>
   <h2>基本信息</h2>
   <ul>
-    <li>个人博客：<a href="http://jswalk.com" target="_blank">jswalk.com</a></li>
+    <li>姓名：杨杰灿（jencia）</li>
     <li>GitHub地址：<a href="https://github.com/jencia" target="_blank">https://github.com/jencia</a></li>
     <li>邮箱地址：1073956837@qq.com</li>
   </ul>
-  <p>我叫杨杰灿，网名叫 Jencia，喜欢称自己为诀死行者。诀死是 JS 的音译过来，所以又叫 JS 修行者。诀死又有另一层含义，就是要立志在这互联网江湖上闯出自己的一片天地，并创造出一套属于自己的武功秘诀，专心研究 JS ，至死方休，因此叫 “诀死”。</p>
-  
+
   <h2>工作业绩</h2>
   
   <p>厦门畅享信息技术有限公司（2018.06 ~ 至今）</p>
@@ -28,7 +30,7 @@
 
   <h2>技术清单</h2>
   <blockquote>
-    <p>学习不易，坚持更不易，每段<a href="/article/20200702">学习历程</a>都值得记录。</p>
+    <p>学习不易，坚持更不易，每段<a href="/article/20200502">学习历程</a>都值得记录。</p>
   </blockquote>
   <ul>
     <li>HTML、CSS、JavaScript，最近用 TypeScript 越用越喜欢。</li>
