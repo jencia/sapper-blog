@@ -10,8 +10,13 @@ polka()
 	.use(
 		(req, res, next) => {
 			if (req.path.startsWith('/article/') && !req.path.endsWith('.json')) {
+				const ip = (req.headers || {})['x-forwarded-for'] ||
+					(req.connection || {}).remoteAddress ||
+					(req.socket || {}).remoteAddress ||
+					((req.connection || {}).socket || {}).remoteAddress;
+
 				// 简单监听用户访问的页面
-				console.log(req.path);
+				console.log(`【${ip}】${new Date().toLocaleString()}: ${req.path}`);
 			}
 			next();
 		},
