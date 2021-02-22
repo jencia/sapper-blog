@@ -59,9 +59,12 @@
     // this file is called [slug].html
     const res = await this.fetch(`article/${params.slug}.json`);
     const data = await res.json();
+    const logAccess = () => {
+      this.fetch(`article/access.json?title=${data.title}`)
+    }
 
     if (res.status === 200) {
-      return { post: data };
+      return { post: data, logAccess };
     } else {
       this.error(res.status, data.message);
     }
@@ -69,8 +72,12 @@
 </script>
 
 <script>
+  import { onMount } from 'svelte'
   import Bio from '../../components/Bio.svelte'
   export let post
+  export let logAccess
+
+  onMount(logAccess);
 </script>
 
 <style>
