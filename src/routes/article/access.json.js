@@ -7,25 +7,17 @@ log4js.configure({
   categories: { default: { appenders: ["cheese"], level: "info" } }
 });
 
+function getClientIp (req) {
+  return req.headers['x-forwarded-for'] ||  // 判断是否有反向代理 IP
+  req.connection.remoteAddress ||           // 判断 connection 的远程 IP
+  req.socket.remoteAddress ||               // 判断后端的 socket 的 IP
+  req.connection.socket.remoteAddress;
+}
+
 export async function get(req, res) {
   const { title } = req.query
+  const ip = getClientIp(req)
 
-  // 获取访问者 IP
-  const { data } = await axios.get('https://pv.sohu.com/cityjson%3Fie=utf-8')
-  let returnCitySN = {}
-
-  try {
-    const splitStr = data.split(/\s*=\s*/)[1]
-
-    returnCitySN = JSON.parse(splitStr.replace(';', ''))
-  } catch (e) {}
-
-  if (returnCitySN.cip) {
-    logger.info(`【${returnCitySN.cip}】${title}`)
-  }
-
-  res.writeHead(200, {
-    'Content-Type': 'application/json'
-  });
-  res.end(JSON.stringify(returnCitySN));
+  logger.info((ip ? `【${ip}】` : '') + title)
+  res.end();
 }
