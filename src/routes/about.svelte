@@ -3,54 +3,9 @@
 </svelte:head>
 
 <div class="container">
-  <h1>关于我</h1>
-  <blockquote>
-    <p>网站代码源码已开源到 <a href="https://github.com/jencia/sapper-blog" target="_blank">jencia/sapper-blog</a> ，文章内容部分如要引用请注明出处。</p>
-  </blockquote>
-  <h2>基本信息</h2>
-  <ul>
-    <li>姓名：杨杰灿（jencia）</li>
-    <li>GitHub地址：<a href="https://github.com/jencia" target="_blank">https://github.com/jencia</a></li>
-    <li>邮箱地址：1073956837@qq.com</li>
-  </ul>
-
-  <h2>工作业绩</h2>
-  
-  <p>厦门畅享信息技术有限公司（2018.06 ~ 至今）</p>
-  <ul>
-    <li>试用期期间参与市信用观摩会项目，我开发的动画获得了领导好评，助项目获得全国一等奖的名次，我也因此获得提前转正，成为了动画开发的先驱者；</li>
-    <li>入职半年，获得年度职场新人奖和优秀创新奖；</li>
-    <li>入职一年，以最高考核分数升为中级工程师；</li>
-    <li>入职一年半，参与一个周期长达一年多的项目，担任前端负责人，带领两三人前端团队；</li>
-    <li>入职两年，被邀请加入前端基础建设团队，与架构部一起完善公司组件库和脚手架；</li>
-    <li>入职两年半，1. 获得了优秀开发工程师奖项。2. 开发了 ProTable 组件大幅度提高简要列表页的开发效率，得到了大家的好评，并运用到其他业务线使用，因此获取年度优秀组件奖。3. 开发了基于三维空间体系的复杂动画，呈现的效果得到了客户和领导的一致好评，并获得了年度优秀创新成果奖。</li>
-  </ul>
-  <p><img src="http://cdn.jswalk.com/about-img-honor-1.jpg" alt="荣誉图1" /></p>
-  <p><img src="http://cdn.jswalk.com/about-img-honor-2.jpg" alt="荣誉图2" /></p>
-
-  <h2>技术清单</h2>
-  <blockquote>
-    <p>学习不易，坚持更不易，每段<a href="/article/20200502">学习历程</a>都值得记录。</p>
-  </blockquote>
-  <ul>
-    <li>HTML、CSS、JavaScript，最近用 TypeScript 越用越喜欢。</li>
-    <li>
-      曾经的三大框架 Vue、React、AngularJS 在工作中都用过，其中 React 最熟，一天天的在那研究各种技巧，以达到较好的开发体验。
-      Vue 虽说用得少，但还是会去研究响应式系统怎么实现的，diff 算法是怎样的。
-      不过现在私下更喜欢用 Svelte，他那无虚拟 DOM 特性确实解决了很多问题，还有那各种骚语法太方便了。
-    </li>
-    <li>
-      NodeJS 用得还挺多的：
-      <ul>
-        <li>最早用于应付学校作业，用来开发后端接口；</li>
-        <li>后来知道了 WebSocket ，拿来开发过聊天室；</li>
-        <li>再后来学会 React Native，拿来做后端、App端、Web端三端通讯的二维码扫描登录功能；</li>
-        <li>现在大部分是用来做项目构建和中间层转化的工作；</li>
-        <li>为了弄清项目构建的过程，去阅读了 npm 源码，研究安装过程。</li>
-      </ul>
-    </li>
-    <li>构建工具基本都用过，grunt 刚出来我就研究过，到后来的 gulp、webpack、rollup、parcel、vite，不过基本都停留在会用的程度，有时更喜欢直接用 NodeJS 写个小工具。</li>
-    <li>数据可视化方面，分为图表、地图、动画，其中动画开发是我工作中经常要做的任务，也是我一直到在研究的方面，后续在博客上会有个动画开发专栏。</li>
-    <li>泛客户端类型的，涉及比较少，只用过 React Native 和微信小程序，微信小程序用的还是原生的，当时刚出来还没有框架。</li>
-  </ul>
+  {@html content.html}
 </div>
+
+<script>
+  import content from './about.md'
+</script>
