@@ -7,9 +7,8 @@
 
   <footer>
     &copy; 2020-2023 jswalk.com
-    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35020602001857">
-      <img src="logo-beian.png" alt="备案logo"/>
-      闽公网安备 35020602001857号
+    <a target="_blank" href="https://beian.miit.gov.cn/">
+      闽ICP备 2020020993号-1
     </a>
   </footer>
 </div>
@@ -50,11 +49,6 @@
     padding: 1em 2em;
     text-align: center;
     width: 100%;
-  }
-  footer img {
-    width: 16px;
-    height: 16px;
-    vertical-align: text-top;
   }
   footer a {
     text-decoration: none;
